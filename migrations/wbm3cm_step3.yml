@@ -8,6 +8,7 @@ process:
   # $revision_id_field: revision_id filled out by the deriver
   moderation_state:
     plugin: migration_lookup
+    migration: wbm3cm_step1
     source:
       - revision_id
       - langcode
