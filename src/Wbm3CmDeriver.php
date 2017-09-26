@@ -25,5 +25,6 @@ class Wbm3CmDeriver extends DeriverBase {
       }
       $this->derivatives[$entity_type_id] = $definition;
     }
+    return parent::getDerivativeDefinitions($base_plugin_definition);
   }
 }
