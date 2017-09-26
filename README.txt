@@ -8,9 +8,13 @@ We use the migrate API to
 
 2. Change the moderation_state to NULL now that we saved them.
 
-3. Rename the workflow configuration entities and remove their dependency on workbench_moderation (todo)
+3. Restore from 1.
 
-4. Create the map from wbm states to cm states
+We also need to
 
-5. Apply those to the entities -- the old state can be found via migration_lookup
+2.a. Rename the workbench moderation configuration entities and remove their dependency on workbench_moderation (todo)
+2.b. Uninstall workbench moderation
+2.c. Install content moderation
+2.d. Recreate all the configuration (todo, steal from wbm2cm)
+
 
