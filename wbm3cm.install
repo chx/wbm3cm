@@ -3,6 +3,7 @@
 function wbm3cm_install() {
   $entity_types = [];
   $entities = \Drupal::service('config.manager')->findConfigEntityDependentsAsEntities('module', ['workbench_moderation']);
+  /** @var \Drupal\Core\Config\Entity\ConfigEntityInterface $entity */
   foreach ($entities as $entity) {
     if ($entity->getThirdPartySettings('workbench_moderation') && ($entity_type = $entity->getEntityType()->getBundleOf())) {
       $entity_types[$entity_type][] = $entity->id();
