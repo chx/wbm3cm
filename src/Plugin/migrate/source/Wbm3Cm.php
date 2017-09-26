@@ -11,10 +11,10 @@ class Wbm3Cm extends SqlBase {
    */
   public function query() {
     $query = $this->select($this->configuration['revision_data_table'], 'r');
-    $revision_id_field = $this->configuration['revision_id_field'];
-    $query->addField('r', $revision_id_field, $revision_id_field);
+    $query->addField('r', $this->configuration['revision_id_field'], 'revision_id');
+    $query->addField('r', 'langcode');
     if (!empty($this->configuration['moderation_state'])) {
-      $query->addField('r', 'moderation_state',  'moderation_state');
+      $query->addField('r', 'moderation_state');
     }
     $query->condition($this->configuration['bundle_field'], $this->configuration['bundles'], 'IN');
     return $query;
@@ -24,7 +24,8 @@ class Wbm3Cm extends SqlBase {
    * {@inheritdoc}
    */
   public function getIds() {
-    $ids[$this->configuration['revision_id_field']]['type'] = 'integer';
+    $ids['revision_id']['type'] = 'integer';
+    $fields['langcode']['type'] = 'string';
     return $ids;
   }
 
@@ -32,7 +33,8 @@ class Wbm3Cm extends SqlBase {
    * {@inheritdoc}
    */
   public function fields() {
-    $fields[$this->configuration['revision_id_field']]['type'] = 'integer';
+    $fields['revision_id']['type'] = 'integer';
+    $fields['langcode']['type'] = 'string';
     if (!empty($this->configuration['moderation_state'])) {
       $fields['moderation_state']['type'] = 'integer';
     }

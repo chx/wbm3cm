@@ -19,7 +19,7 @@ class Wbm3CmDeriver extends DeriverBase {
       $definition['source']['revision_id_field'] = $revision_id_field;
       $definition['source']['bundle_field'] = $entity_type->getKey('bundle');
       $definition['source']['bundles'] = $bundles;
-      $definition['process'][$revision_id_field] = $revision_id_field;
+      $definition['process'][$revision_id_field] = 'revision_id';
       if (!isset($definition['destination']['plugin'])) {
         $definition['destination']['plugin'] = "nentity_revision:$entity_type_id";
       }

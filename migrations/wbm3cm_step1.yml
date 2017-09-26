@@ -1,6 +1,6 @@
 deriver: 'Drupal\wbm3cm\Wbm3CmDeriver'
 source:
-  plugin: 'wbm3cm'
+  plugin: wbm3cm
   moderation_state: true
   # revision_data_table: filled out by the deriver
   # revision_id_field: filled out by the deriver

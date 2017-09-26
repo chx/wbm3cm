@@ -25,7 +25,7 @@ class Nothing extends DestinationBase {
    * {@inheritdoc}
    */
   public function getIds() {
-    $ids['to_save']['type'] = 'integer';
+    $ids['to_save']['type'] = 'string';
     return $ids;
   }
 
