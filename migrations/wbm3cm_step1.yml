@@ -4,6 +4,7 @@ source:
   moderation_state: true
   # revision_data_table: filled out by the deriver
   # revision_id_field: filled out by the deriver
+  # bundle_field: filled out by the deriver
   # bundles: filled out by the deriver
 process:
   to_save: moderation_state
