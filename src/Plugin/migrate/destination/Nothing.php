@@ -36,3 +36,4 @@ class Nothing extends DestinationBase {
     return [];
   }
 }
+h
