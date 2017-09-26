@@ -1,0 +1,11 @@
+deriver: 'Drupal\wbm3cm\Wbm3CmDeriver'
+source:
+  plugin: 'wbm3cm'
+  # revision_data_table: filled out by the deriver
+  # revision_id_field: filled out by the deriver
+  # bundles: filled out by the deriver
+process:
+  # $id_field: id filled out by the deriver
+  moderation_state:
+    plugin: wbm3cm_null
+# destination filled out by the deriver
