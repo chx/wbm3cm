@@ -1,4 +1,4 @@
-deriver: 'Drupal\wbm3cm\Wbm3CmDeriver'
+deriver: 'Drupal\wbm3cm\Wbm3CmDeriverStep3'
 source:
   plugin: wbm3cm
   # revision_data_table: filled out by the deriver
@@ -9,7 +9,7 @@ process:
   # $revision_id_field: revision_id filled out by the deriver
   moderation_state:
     plugin: migration_lookup
-    migration: wbm3cm_step1
+    #migration: wbm3cm_step1:$entity_type filled out by the deriver
     source:
       - revision_id
       - langcode

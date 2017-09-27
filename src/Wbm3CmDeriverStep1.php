@@ -4,7 +4,7 @@ namespace Drupal\wbm3cm;
 
 use Drupal\Component\Plugin\Derivative\DeriverBase;
 
-class Wbm3CmDeriver extends DeriverBase {
+class Wbm3CmDeriverStep1 extends DeriverBase {
 
   /**
    * {@inheritdoc}
@@ -21,12 +21,12 @@ class Wbm3CmDeriver extends DeriverBase {
         'bundle_field' => $entity_type->getKey('bundle'),
         'bundles' => $bundles,
       ];
-      $definition['process'][$revision_id_field] = 'revision_id';
-      if (!isset($definition['destination']['plugin'])) {
-        $definition['destination']['plugin'] = "nentity_revision:$entity_type_id";
-      }
-      $this->derivatives[$entity_type_id] = $definition;
+      $this->derivatives[$entity_type_id] = $this->addMore($definition, $entity_type_id, $revision_id_field);
     }
     return parent::getDerivativeDefinitions($base_plugin_definition);
+  }
+
+  protected function addMore(array $definition, $entity_type_id, $revision_id_field) {
+    return $definition;
   }
 }
