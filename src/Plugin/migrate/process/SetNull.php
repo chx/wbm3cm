@@ -8,10 +8,10 @@ use Drupal\migrate\Row;
 
 /**
  * @MigrateProcessPlugin(
- *   id = "wbm3cm_null"
+ *   id = "wbm3cm_set_null"
  * )
  */
-class Null extends ProcessPluginBase {
+class SetNull extends ProcessPluginBase {
 
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
     // EntityContentBase::updateEntity() calls $field->setValue($values) which

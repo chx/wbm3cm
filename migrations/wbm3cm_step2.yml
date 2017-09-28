@@ -9,5 +9,5 @@ source:
 process:
   # $revision_id_field: $revision_id_field filled out by the deriver
   moderation_state:
-    plugin: wbm3cm_null
+    plugin: wbm3cm_set_null
 # destination plugin filled out by the deriver
