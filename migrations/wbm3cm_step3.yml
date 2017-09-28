@@ -1,3 +1,4 @@
+id: wbm3cm_step3
 deriver: 'Drupal\wbm3cm\Deriver\Step3'
 source:
   plugin: wbm3cm

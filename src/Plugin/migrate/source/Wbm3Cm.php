@@ -4,6 +4,13 @@ namespace Drupal\wbm3cm\Plugin\migrate\source;
 
 use Drupal\migrate\Plugin\migrate\source\SqlBase;
 
+/**
+ *
+ * @MigrateSource(
+ *   id = "wbm3cm",
+ *   source_module = "wbm3cm"
+ * )
+ */
 class Wbm3Cm extends SqlBase {
 
   /**
