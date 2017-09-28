@@ -18,7 +18,7 @@ class Nothing extends DestinationBase {
    * {@inheritdoc}
    */
   public function import(Row $row, array $old_destination_id_values = []) {
-    return $row->getDestinationProperty('to_save');
+    return [$row->getDestinationProperty('to_save')];
   }
 
   /**

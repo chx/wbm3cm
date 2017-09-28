@@ -45,7 +45,10 @@ class Wbm3Cm extends SqlBase {
       'type' => 'integer',
       'alias' => 'r',
     ];
-    $fields['langcode']['type'] = 'string';
+    $ids['langcode'] = [
+      'type' => 'string',
+      'alias' => 'r',
+    ];
     return $ids;
   }
 
