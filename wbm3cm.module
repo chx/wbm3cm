@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\wbm3cm\Plugin\migrate\destination\EntityRevision;
+
+/**
+ * {@inheritdoc}
+ */
+function wbm3cm_migrate_destination_info_alter(&$definitions) {
+  // If the entity_revision:* destination gets translations switched on
+  // it throws an exception for every row because the langcode id is not
+  // returned by getIds() but is returned by import()...
+  foreach ($definitions as $id => $definition) {
+    if (preg_match('/^entity_revision:/', $id)) {
+      $definitions[$id]['class'] = EntityRevision::class;
+    }
+  }
+}

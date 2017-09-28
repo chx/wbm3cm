@@ -12,4 +12,5 @@ process:
   moderation_state:
     plugin: wbm3cm_set_null
 destination:
+  #plugin: entity_revision:$entity_type filled out by the deriver
   translations: true
