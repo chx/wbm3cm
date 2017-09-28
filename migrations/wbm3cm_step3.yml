@@ -1,4 +1,4 @@
-deriver: 'Drupal\wbm3cm\Wbm3CmDeriverStep3'
+deriver: 'Drupal\wbm3cm\Deriver\Step3'
 source:
   plugin: wbm3cm
   # revision_data_table: filled out by the deriver

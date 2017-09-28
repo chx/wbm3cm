@@ -1,8 +1,8 @@
 <?php
 
-namespace Drupal\wbm3cm;
+namespace Drupal\wbm3cm\Deriver;
 
-class Wbm3CmDeriverStep3 extends Wbm3CmDeriverStep2 {
+class Step3 extends Step2 {
 
   protected function addMore(array $definition, $entity_type_id, $revision_id_field) {
     $definition['moderation_state']['migration'] = "wbm3cm_step1:$entity_type_id";

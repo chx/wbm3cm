@@ -1,4 +1,4 @@
-deriver: 'Drupal\wbm3cm\Wbm3CmDeriverStep1'
+deriver: 'Drupal\wbm3cm\Deriver\Step1'
 source:
   plugin: wbm3cm
   moderation_state: true

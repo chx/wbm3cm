@@ -1,9 +1,8 @@
 <?php
 
-namespace Drupal\wbm3cm;
+namespace Drupal\wbm3cm\Deriver;
 
-
-class Wbm3CmDeriverStep2 extends Wbm3CmDeriverStep1 {
+class Step2 extends Step1 {
 
   protected function addMore(array $definition, $entity_type_id, $revision_id_field) {
     $definition['process'][$revision_id_field] = 'revision_id';

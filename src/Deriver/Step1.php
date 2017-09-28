@@ -1,10 +1,10 @@
 <?php
 
-namespace Drupal\wbm3cm;
+namespace Drupal\wbm3cm\Deriver;
 
 use Drupal\Component\Plugin\Derivative\DeriverBase;
 
-class Wbm3CmDeriverStep1 extends DeriverBase {
+class Step1 extends DeriverBase {
 
   /**
    * {@inheritdoc}
