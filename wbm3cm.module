@@ -15,3 +15,12 @@ function wbm3cm_migrate_destination_info_alter(&$definitions) {
     }
   }
 }
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function wbm3cm_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'entity_update' || $hook == 'entity_presave') {
+    unset($implementations['workbench_moderation']);
+  }
+}
