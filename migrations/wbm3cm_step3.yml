@@ -13,8 +13,8 @@ process:
     plugin: migration_lookup
     #migration: wbm3cm_step1:$entity_type filled out by the deriver
     source:
-      - revision_id
-      - langcode
+      #- $revision_id_field filled out by the deriver
+      #- $langcode_field filled out by the deriver
 destination:
   #plugin: entity_revision:$entity_type filled out by the deriver
   translations: true
