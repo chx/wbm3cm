@@ -32,7 +32,7 @@ class Wbm3Cm extends SqlBase {
     if (!empty($this->configuration['moderation_state'])) {
       $query->addField('r', 'moderation_state');
     }
-    $query->innerJoin($this->configuration['data_table'], 'd', "USING($revision_id_field)");
+    $query->innerJoin($this->configuration['data_table'], 'd', "d.$revision_id_field = r.$revision_id_field");
     $query->condition($this->configuration['bundle_field'], $this->configuration['bundles'], 'IN');
     return $query;
   }
