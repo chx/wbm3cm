@@ -8,6 +8,7 @@ source:
   # bundles: filled out by the deriver
 process:
   # $revision_id_field: $revision_id_field filled out by the deriver
+  # $langcode_field: langcode_field filled out by the deriver
   moderation_state:
     plugin: migration_lookup
     #migration: wbm3cm_step1:$entity_type filled out by the deriver

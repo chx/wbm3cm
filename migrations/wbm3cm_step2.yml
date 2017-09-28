@@ -8,6 +8,7 @@ source:
   # bundles: filled out by the deriver
 process:
   # $revision_id_field: $revision_id_field filled out by the deriver
+  # $langcode_field: langcode_field filled out by the deriver
   moderation_state:
     plugin: wbm3cm_set_null
 # destination plugin filled out by the deriver

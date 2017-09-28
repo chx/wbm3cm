@@ -19,6 +19,7 @@ class Step1 extends DeriverBase {
         'data_table' => $entity_type->getDataTable(),
         'revision_data_table' => $entity_type->getRevisionDataTable(),
         'revision_id_field' => $revision_id_field,
+        'langcode_field' => $entity_type->getKey('langcode'),
         'bundle_field' => $entity_type->getKey('bundle'),
         'bundles' => $bundles,
       ];

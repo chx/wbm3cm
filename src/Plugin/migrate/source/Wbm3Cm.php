@@ -28,7 +28,7 @@ class Wbm3Cm extends SqlBase {
     $query = $this->select($this->configuration['revision_data_table'], 'r');
     $revision_id_field = $this->configuration['revision_id_field'];
     $query->addField('r', $revision_id_field);
-    $query->addField('r', 'langcode');
+    $query->addField('r', $this->configuration['langcode_field']);
     if (!empty($this->configuration['moderation_state'])) {
       $query->addField('r', 'moderation_state');
     }
@@ -45,7 +45,7 @@ class Wbm3Cm extends SqlBase {
       'type' => 'integer',
       'alias' => 'r',
     ];
-    $ids['langcode'] = [
+    $ids[$this->configuration['langcode_field']] = [
       'type' => 'string',
       'alias' => 'r',
     ];
