@@ -56,8 +56,8 @@ class Wbm3Cm extends SqlBase {
    * {@inheritdoc}
    */
   public function fields() {
-    $fields['revision_id']['type'] = 'integer';
-    $fields['langcode']['type'] = 'string';
+    $fields[$this->configuration['revision_id_field']]['type'] = 'integer';
+    $fields[$this->configuration['langcode_field']]['type'] = 'string';
     if (!empty($this->configuration['moderation_state'])) {
       $fields['moderation_state']['type'] = 'integer';
     }
