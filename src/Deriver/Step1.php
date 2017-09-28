@@ -23,12 +23,12 @@ class Step1 extends DeriverBase {
         'bundle_field' => $entity_type->getKey('bundle'),
         'bundles' => $bundles,
       ];
-      $this->derivatives[$entity_type_id] = $this->addMore($definition, $entity_type_id, $revision_id_field);
+      $this->derivatives[$entity_type_id] = $this->addMore($definition, $entity_type_id);
     }
     return parent::getDerivativeDefinitions($base_plugin_definition);
   }
 
-  protected function addMore(array $definition, $entity_type_id, $revision_id_field) {
+  protected function addMore(array $definition, $entity_type_id) {
     return $definition;
   }
 }

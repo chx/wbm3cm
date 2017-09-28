@@ -11,4 +11,5 @@ process:
   # $langcode_field: langcode_field filled out by the deriver
   moderation_state:
     plugin: wbm3cm_set_null
-# destination plugin filled out by the deriver
+destination:
+  translations: true

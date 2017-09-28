@@ -15,4 +15,6 @@ process:
     source:
       - revision_id
       - langcode
-# destination plugin filled out by the deriver
+destination:
+  #plugin: entity_revision:$entity_type filled out by the deriver
+  translations: true
