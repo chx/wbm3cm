@@ -1,0 +1,6 @@
+name: Workbench Moderation to Content Moderation
+type: module
+description: 'Workbench Moderation to Content Moderation'
+core: 8.x
+package: migrate
+

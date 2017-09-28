@@ -1,6 +1,6 @@
-wbm2cm exists and some of the ideas I borrowed from there but this module takes
-such a different approach to the relevant changes to the entities that I
-decided to name it wbm3cm.
+wbm2cm exists and I took the config rebuild and the overall steps necessary
+from there. But the implementation of how entities are handled are
+completely different and so I decided to make this a separate module.
 
 We use the migrate API to
 
@@ -12,9 +12,7 @@ We use the migrate API to
 
 We also need to
 
-2.a. Rename the workbench moderation configuration entities and remove their dependency on workbench_moderation (todo)
+2.a. Save the workbench moderation configuration
 2.b. Uninstall workbench moderation
 2.c. Install content moderation
-2.d. Recreate all the configuration (todo, steal from wbm2cm)
-
-
+2.d. Recreate all the configuration
