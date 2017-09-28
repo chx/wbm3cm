@@ -16,3 +16,6 @@ We also need to
 2.b. Uninstall workbench moderation
 2.c. Install content moderation
 2.d. Recreate all the configuration
+
+wbm3cm.sh does all these steps for nodes. Writing a better runner and a GUI is
+left as an exercise to the reader.
