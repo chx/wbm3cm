@@ -13,12 +13,12 @@ class Step1 extends DeriverBase {
     foreach (\Drupal::state()->get('wbm3cm') as $entity_type_id => $bundles) {
       /** @var \Drupal\Core\Entity\ContentEntityTypeInterface $entity_type */
       $entity_type = \Drupal::entityTypeManager()->getDefinition($entity_type_id);
-      $revision_id_field = $entity_type->getKey('revision');
       $definition = $base_plugin_definition;
       $definition['source'] += [
-        'data_table' => $entity_type->getDataTable(),
+        'base_table' => $entity_type->getBaseTable(),
         'revision_data_table' => $entity_type->getRevisionDataTable(),
-        'revision_id_field' => $revision_id_field,
+        'id_field' => $entity_type->getKey('id'),
+        'revision_id_field' => $entity_type->getKey('revision'),
         'langcode_field' => $entity_type->getKey('langcode'),
         'bundle_field' => $entity_type->getKey('bundle'),
         'bundles' => $bundles,

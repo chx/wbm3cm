@@ -26,13 +26,13 @@ class Wbm3Cm extends SqlBase {
    */
   public function query() {
     $query = $this->select($this->configuration['revision_data_table'], 'r');
-    $revision_id_field = $this->configuration['revision_id_field'];
-    $query->addField('r', $revision_id_field);
+    $id_field = $this->configuration['id_field'];
+    $query->addField('r', $this->configuration['revision_id_field']);
     $query->addField('r', $this->configuration['langcode_field']);
     if (!empty($this->configuration['moderation_state'])) {
       $query->addField('r', 'moderation_state');
     }
-    $query->innerJoin($this->configuration['data_table'], 'd', "d.$revision_id_field = r.$revision_id_field");
+    $query->innerJoin($this->configuration['base_table'], 'b', "r.$id_field = b.$id_field");
     $query->condition($this->configuration['bundle_field'], $this->configuration['bundles'], 'IN');
     return $query;
   }
