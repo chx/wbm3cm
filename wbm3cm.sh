@@ -1,3 +1,4 @@
+drush en -y migrate_run,wbm3cm
 drush mi wbm3cm_step1:node
 drush mi wbm3cm_step2:node
 drush ev 'Drupal\wbm3cm\Wbm3CmConfig::save()'
