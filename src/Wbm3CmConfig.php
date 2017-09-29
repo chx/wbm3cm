@@ -28,18 +28,22 @@ class Wbm3CmConfig {
         'transitions' => [],
       ],
     ];
+    $weight = 0;
     foreach ($states as $state) {
       $workflow_config['type_settings']['states'][$state['id']] = [
         'label' => $state['label'],
         'published' => $state['published'],
         'default_revision' => $state['default_revision'],
+        'weight' => $weight++,
       ];
     }
+    $weight = 0;
     foreach ($transitions as $transition) {
       $workflow_config['type_settings']['transitions'][$transition['id']] = [
         'label' => $transition['label'],
         'to' => $transition['stateTo'],
         'from' => explode(',', $transition['stateFrom']),
+        'weight' => $weight++,
       ];
     }
     $workflow = new Workflow($workflow_config, 'workflow');
